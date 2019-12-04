@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>HooperSpot - blogging</title><link href="https://hooperspot.github.io/" rel="alternate"></link><link href="https://hooperspot.github.io/feeds/blogging.atom.xml" rel="self"></link><id>https://hooperspot.github.io/</id><updated>2019-12-03T00:00:00+08:00</updated><entry><title>Pelican Themes that I Like</title><link href="https://hooperspot.github.io/pelican-themes-that-i-like.html" rel="alternate"></link><published>2019-12-03T00:00:00+08:00</published><updated>2019-12-03T00:00:00+08:00</updated><author><name>John Yu</name></author><id>tag:hooperspot.github.io,2019-12-03:/pelican-themes-that-i-like.html</id><summary type="html"></summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/robulouski/voidy-bootstrap/tree/83f4d802710bbfa20123a9b7f1921424e292ef53"&gt;voidy-bootstrap&lt;/a&gt;
+&lt;img alt="" src="./images/voidy.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-themes/tree/master/simple-bootstrap"&gt;simple-bootstrap&lt;/a&gt;
+&lt;img alt="" src="./images/simple.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/suheb/resume/tree/ee7dcf1239a3554490f047ee36430d1a799a0882"&gt;resume&lt;/a&gt;
+&lt;img alt="" src="./images/resume.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/kdeldycke/plumage/tree/6e0dd7acaff3041f52205e1e58060473910029d9"&gt;plumage&lt;/a&gt;
+&lt;img alt="" src="./images/plum.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-themes/tree/master/photowall"&gt;photowall&lt;/a&gt;
+&lt;img alt="" src="./images/photowall.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up"&gt;pelican-striped-html5up&lt;/a&gt;
+&lt;img alt="" src="./images/striped.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt;
+&lt;img alt="" src="./images/bootstrap3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-themes/tree/master/notmyidea-cms"&gt;notmyidea&lt;/a&gt;
+&lt;img alt="" src="./images/notmyidea.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/molivier/nest/tree/18aa1345f70219c00704848d321daf45c2f50ba7"&gt;nest&lt;/a&gt;
+&lt;img alt="" src="./images/nest.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex/tree/b3bd59002a3e85803332c35702d90e1e19ef39b6"&gt;flex&lt;/a&gt;
+&lt;img alt="" src="./images/flex.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/textbook/bulrush/tree/19b2fc4d79e7c060218172ae5484a4a216b40921"&gt;bulrush&lt;/a&gt;
+&lt;img alt="" src="./images/bulrush.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-themes/tree/master/bootlex"&gt;bootlex&lt;/a&gt;
+&lt;img alt="" src="./images/bootlex.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/demianbrecht/pelican-bold/tree/b27e6056b530b4a9df863e074503e11dc353d708"&gt;bold&lt;/a&gt;
+&lt;img alt="" src="./images/bold.png"&gt;&lt;/p&gt;</content><category term="blogging"></category><category term="pelican"></category><category term="themes"></category></entry></feed>
