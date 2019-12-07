@@ -41,98 +41,6 @@
 <p>In <a href="./category/pelican.html">pelican</a>. </p>
 <p>tags: <a href="./tag/pelican.html">pelican</a><a href="./tag/git.html">git</a></p></p></footer><!-- /.post-info --><!-- /.post-info -->
                 <p>Pelican is a Python based static site generator great for making blogs with simply text. The content can be written in reStracutred or Markdown syntax. Both are easy to learn. Here I take notes on how to set up a Pelican site on GitHub. There are various ways to make such a site but I found the following to be most streamlined. I assume you are familiar with Python, MacOS/Linux command line, git commands.</p>
-<h1>Install Pelican</h1>
-<p>There are a few packaged to be installed before we can get Pelican running. Type in the following lines in your terminal. It's recommended to use a virtual environment.</p>
-<div class="highlight"><pre><span></span>$ pip install pelican markdown
-</pre></div>
-
-
-<h1>Set up username.github.io repositories</h1>
-<p>If already registered an account, log in to Github and create two new repositories, username.github.io-src and username.github.io. The username.github.io-src repository will hold the sources of your blog and the username.github.io repository will contain the output HTML files Pelican generates. To add the output directory as a submodule, initialize it with a README file.</p>
-<p>Clone the source repository you created:</p>
-<div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">username</span><span class="o">/</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">-</span><span class="n">src</span><span class="w"> </span><span class="n">blog</span><span class="w"></span>
-</pre></div>
-
-
-<p>Then change directory to the site:</p>
-<div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">blog</span>
-</pre></div>
-
-
-<h1>Set up the blog with Pelican</h1>
-<p>Double check that you’re working in the source git repository using:</p>
-<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
-</pre></div>
-
-
-<p>You should see that you are using the username.github.io-src repository. Then, clone the output repository as a git submodule (substitute your Github username):</p>
-<div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="n">submodule</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">username</span><span class="o">/</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span><span class="w"> </span><span class="k">output</span><span class="w"></span>
-</pre></div>
-
-
-<p>Pelican provides an excellent quickstart command. Run it:</p>
-<div class="highlight"><pre><span></span>$<span class="nv">pelican</span><span class="o">-</span><span class="nv">quickstart</span>
-<span class="nv">Welcome</span> <span class="nv">to</span> <span class="nv">pelican</span><span class="o">-</span><span class="nv">quickstart</span> <span class="nv">v4</span>.<span class="mi">0</span>.<span class="mi">1</span>    
-<span class="nv">This</span> <span class="nv">script</span> <span class="nv">will</span> <span class="nv">help</span> <span class="nv">you</span> <span class="nv">create</span> <span class="nv">a</span> <span class="nv">new</span> <span class="nv">Pelican</span><span class="o">-</span><span class="nv">based</span> <span class="nv">website</span>.
-
-<span class="nv">Please</span> <span class="nv">answer</span> <span class="nv">the</span> <span class="nv">following</span> <span class="nv">questions</span> <span class="nv">so</span> <span class="nv">this</span> <span class="nv">script</span> <span class="nv">can</span> <span class="nv">generate</span> <span class="nv">the</span> <span class="nv">files</span>
-<span class="nv">needed</span> <span class="nv">by</span> <span class="nv">Pelican</span>.
-
-
-<span class="o">&gt;</span> <span class="nv">Where</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">create</span> <span class="nv">your</span> <span class="nv">new</span> <span class="nv">web</span> <span class="nv">site</span>? [.] .
-<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">title</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? <span class="nv">Blog</span> <span class="nv">Title</span> <span class="nv">Goes</span> <span class="nv">Here</span>
-<span class="o">&gt;</span> <span class="nv">Who</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">author</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? <span class="nv">Author</span> <span class="nv">Name</span> <span class="nv">Goes</span> <span class="nv">Here</span>
-<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">default</span> <span class="nv">language</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? [<span class="nv">English</span>] <span class="nv">en</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">a</span> <span class="nv">URL</span> <span class="nv">prefix</span>? <span class="nv">e</span>.<span class="nv">g</span>., <span class="nv">https</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span>   <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span> <span class="nv">y</span>
-<span class="o">&gt;</span> <span class="nv">URL</span> <span class="nv">prefix</span>: <span class="nv">http</span>:<span class="o">//</span><span class="nv">username</span>.<span class="nv">github</span>.<span class="nv">io</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">enable</span> <span class="nv">article</span> <span class="nv">pagination</span>? <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span> <span class="nv">y</span>
-<span class="o">&gt;</span> <span class="nv">How</span> <span class="nv">many</span> <span class="nv">articles</span> <span class="nv">per</span> <span class="nv">page</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span>? [<span class="mi">10</span>] <span class="mi">5</span>
-<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">is</span> <span class="nv">your</span> <span class="nv">time</span> <span class="nv">zone</span>? [<span class="nv">Europe</span><span class="o">/</span><span class="nv">Paris</span>] <span class="nv">asia</span><span class="o">/</span><span class="nv">shanghai</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">generate</span> <span class="nv">a</span> <span class="nv">tasks</span>.<span class="nv">py</span><span class="o">/</span><span class="nv">Makefile</span> <span class="nv">to</span> <span class="nv">automate</span> <span class="nv">generation</span> <span class="nv">and</span> <span class="nv">publishing</span>? <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span> <span class="nv">y</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">FTP</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">SSH</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">Dropbox</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">S3</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">Rackspace</span> <span class="nv">Cloud</span> <span class="nv">Files</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
-<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">GitHub</span> <span class="nv">Pages</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">y</span>
-<span class="o">&gt;</span> <span class="nv">Is</span> <span class="nv">this</span> <span class="nv">your</span> <span class="nv">personal</span> <span class="nv">page</span> <span class="ss">(</span><span class="nv">username</span>.<span class="nv">github</span>.<span class="nv">io</span><span class="ss">)</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">y</span>
-
-<span class="nv">Done</span>. <span class="nv">Your</span> <span class="nv">new</span> <span class="nv">project</span> <span class="nv">is</span> <span class="nv">available</span> <span class="nv">at</span> <span class="o">/</span><span class="nv">Users</span><span class="o">/</span><span class="nv">username</span><span class="o">/</span><span class="nv">PycharmProjects</span><span class="o">/</span><span class="nv">blog_test</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">blog</span>
-</pre></div>
-
-
-<p>You will receive an error message because the output directory already exists. It is OK.</p>
-<p>Open the publishconf.py file and set the DELETE_OUTPUT_DIRECTORY variable to False. </p>
-<h1>Publish the first post</h1>
-<p>Write a quick post, I'd like to use Markdown but reStructured would work fine as well. Put the new post into the content folder and it's ready to go.</p>
-<p>Build your blog and test the results:</p>
-<div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">devserver</span>
-</pre></div>
-
-
-<p>This builds the blog, and then runs a local webserver on port 8000. Check in the browser if everything turned out as intended. If everything is checks out, generate the website:</p>
-<div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">publish</span>
-</pre></div>
-
-
-<p>Then add your files to git tracking, commit them, and push to the repositories. </p>
-<div class="highlight"><pre><span></span><span class="n">cd</span> <span class="k">output</span>
-<span class="n">git</span> <span class="k">add</span> <span class="p">.</span>
-<span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;First post.&quot;</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
-</pre></div>
-
-
-<p>Due to the use of a submodule, you should do this with your output files before you push the source files.</p>
-<div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">..</span>
-<span class="n">git</span> <span class="k">add</span> <span class="p">.</span>
-<span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;First commit.&quot;</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
-</pre></div>
-
-
-<p>Now, you can visit the <a href="https://username.github.io">https://username.github.io</a> and check out the new site.</p>
-<p>You can find the original post <a href="https://fedoramagazine.org/make-github-pages-blog-with-pelican/">here</a>.</p>
         </article></aside><!-- /#featured -->
                 <h1>Other articles</h1>
                 <hr />
@@ -187,7 +95,7 @@
                         <h2>Search</h2>
                         <form method=get action="http://www.google.com/search">
                           <input type=text name=q>
-                          <input type=submit name=btnG value="Google 搜索">
+                          <input type=submit name=btnG value="Google">
                           <input type=hidden name=ie value=GB2312>
                           <input type=hidden name=oe value=GB2312>
                           <input type=hidden name=hl value=zh-CN>
@@ -220,7 +128,7 @@
                             <li><a href="#">Another social link</a></li>
                         </ul>
                 </div><!-- /.social -->
-        </aside><!-- /#sidebar -->
+</aside><!-- /#sidebar -->
 
         <footer id="footer" class="body">
                 <address id="about" class="vcard body">
