@@ -3,27 +3,27 @@
 <head>
         <title>Pelican Themes that I Like</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="HooperSpot ATOM Feed" />
+        <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
+        <link href="./" type="application/atom+xml" rel="alternate" title="HooperSpot ATOM Feed" />
 
 
         <!--[if IE]>
                 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
         <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="/css/ie.css"/>
-                <script src="/js/IE8.js" type="text/javascript"></script><![endif]-->
+                <link rel="stylesheet" type="text/css" media="all" href="./css/ie.css"/>
+                <script src="./js/IE8.js" type="text/javascript"></script><![endif]-->
 
         <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->
+                <link rel="stylesheet" type="text/css" media="all" href="./css/ie6.css"/><![endif]-->
 
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/index.html">HooperSpot </a></h1>
+                <h1><a href="./index.html">HooperSpot </a></h1>
                 <nav><ul>
-                <li><a href="/">Archives</a></li>
+                <li><a href="./">Archives</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
@@ -38,13 +38,16 @@
         </abbr>
 
         <address class="vcard author">
-                By <a class="url fn" href="/author/john-yu.html">John Yu</a>
+                By <a class="url fn" href="./author/john-yu.html">John Yu</a>
         </address>
-<p>In <a href="/category/blogging.html">blogging</a>. </p>
-<p>tags: <a href="/tag/pelican.html">pelican</a><a href="/tag/themes.html">themes</a></p></p></footer><!-- /.post-info --><!-- /.post-info -->
-        <p><a href="https://github.com/robulouski/voidy-bootstrap/tree/83f4d802710bbfa20123a9b7f1921424e292ef53">voidy-bootstrap</a>
+<p>In <a href="./category/blogging.html">blogging</a>. </p>
+<p>tags: <a href="./tag/pelican.html">pelican</a><a href="./tag/themes.html">themes</a></p></p></footer><!-- /.post-info --><!-- /.post-info -->
+        <p>Pelican repository comes with a good number of <a href="https://github.com/getpelican/pelican-themes">themes</a> to use when render you site/blog. Majority of the themes have <a href="http://www.pelicanthemes.com/">previews</a>. Here are a list of these I found interesting. The documentation part varies a lot from theme to theme. It will take a little time to figure it out if you are new to this. Check it out.</p>
+<p>Theme: <a href="https://github.com/robulouski/voidy-bootstrap/tree/83f4d802710bbfa20123a9b7f1921424e292ef53">voidy-bootstrap</a><br>
+Reason: It's influenced by a blog I follow <a href="https://pbpython.com/">Practical Business Python</a>
 <img alt="" src="./images/voidy.png"></p>
-<p><a href="https://github.com/getpelican/pelican-themes/tree/master/simple-bootstrap">simple-bootstrap</a>
+<p>Theme: <a href="https://github.com/getpelican/pelican-themes/tree/master/simple-bootstrap">simple-bootstrap</a><br>
+Reason: Simplicity, clean
 <img alt="" src="./images/simple.png"></p>
 <p><a href="https://github.com/suheb/resume/tree/ee7dcf1239a3554490f047ee36430d1a799a0882">resume</a>
 <img alt="" src="./images/resume.png"></p>
@@ -73,13 +76,25 @@
 </article>
 </section>
 
-        <aside id="sidebar">
+<aside id="sidebar">
+                <div class="search">
+                        <h2>Search</h2>
+                        <form method=get action="http://www.google.com/search">
+                          <input type=text name=q>
+                          <input type=submit name=btnG value="Google">
+                          <input type=hidden name=ie value=GB2312>
+                          <input type=hidden name=oe value=GB2312>
+                          <input type=hidden name=hl value=zh-CN>
+                          <input type=hidden name=domains value=".">
+                          <input type=hidden name=sitesearch value=".">
+                        </form>
+                </div>
                 <div class="widget">
                         <h2>Categories</h2>
                         <ul>
-                           <li class="active"><a href="/category/blogging.html">blogging</a></li>
-                           <li ><a href="/category/misc.html">misc</a></li>
-                           <li ><a href="/category/pelican.html">pelican</a></li>
+                           <li class="active"><a href="./category/blogging.html">blogging</a></li>
+                           <li ><a href="./category/misc.html">misc</a></li>
+                           <li ><a href="./category/pelican.html">pelican</a></li>
                         </ul>
                 </div>
                 <div class="widget blogroll">
@@ -94,13 +109,13 @@
                 <div class="widget social">
                         <h2>Social</h2>
                         <ul>
-                            <li><a href="/None" rel="alternate">atom feed</a></li>
+                            <li><a href="./feeds/all.atom.xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="#">You can add links in your config file</a></li>
                             <li><a href="#">Another social link</a></li>
                         </ul>
                 </div><!-- /.social -->
-        </aside><!-- /#sidebar -->
+</aside><!-- /#sidebar -->
 
         <footer id="footer" class="body">
                 <address id="about" class="vcard body">
