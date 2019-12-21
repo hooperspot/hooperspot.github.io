@@ -1,1 +1,0 @@
-# hooperspot.github.io
